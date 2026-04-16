@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head(${pageTitle}, ${pageDescription})}"></head>
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<!-- Hero da página -->
+<section class="pagina-hero">
+    <div class="pagina-hero-overlay"></div>
+    <div class="container">
+        <div class="pagina-hero-conteudo">
+            <span class="secao-tag">Especialidades</span>
+            <h1>Áreas de Atuação</h1>
+            <p>Assessoria jurídica especializada em todas as dimensões do Direito Imobiliário brasileiro.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO: Grid de áreas completo
+     ============================================================ -->
+<section class="areas-completas">
+    <div class="container">
+
+        <div class="area-detalhe reveal">
+            <div class="area-detalhe-icone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="area-detalhe-texto">
+                <h2>Compra e Venda de Imóveis</h2>
+                <p>A aquisição de um imóvel é, para a maioria das famílias, a maior decisão financeira da vida. Atuamos em todas as etapas dessa transação: análise documental completa, verificação de ônus e restrições, elaboração ou revisão de propostas e contratos, acompanhamento junto ao Cartório de Registro de Imóveis e escrituração.</p>
+                <p>Nossa due diligence imobiliária identifica riscos ocultos — como penhoras não registradas, débitos fiscais, litígios sobre o imóvel e irregularidades construtivas — antes que eles se tornem um problema para o comprador.</p>
+                <ul class="area-lista">
+                    <li>Análise e revisão de contratos de compra e venda</li>
+                    <li>Due diligence imobiliária completa</li>
+                    <li>Assessoria em financiamentos e SFH</li>
+                    <li>Acompanhamento de escrituração e registro</li>
+                    <li>Promessa de compra e venda</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="area-detalhe area-detalhe-invertida reveal">
+            <div class="area-detalhe-icone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <div class="area-detalhe-texto">
+                <h2>Contratos de Locação</h2>
+                <p>A relação locatícia envolve obrigações importantes para ambas as partes. Elaboramos e revisamos contratos de locação residencial e comercial, garantindo que todas as cláusulas estejam em conformidade com a Lei do Inquilinato (Lei 8.245/91) e com os interesses do cliente.</p>
+                <p>Atuamos tanto na defesa de locadores (proprietários) quanto de locatários (inquilinos) em disputas, ações de despejo, revisional de aluguel e cobrança de aluguéis em atraso.</p>
+                <ul class="area-lista">
+                    <li>Elaboração de contratos de locação residencial e comercial</li>
+                    <li>Revisão contratual e consultoria preventiva</li>
+                    <li>Ação de despejo por falta de pagamento</li>
+                    <li>Ação revisional de aluguel</li>
+                    <li>Defesa em ações de despejo</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="area-detalhe reveal">
+            <div class="area-detalhe-icone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div class="area-detalhe-texto">
+                <h2>Regularização Fundiária e Usucapião</h2>
+                <p>Milhões de imóveis no Brasil estão em situação irregular — sem escritura, sem registro ou com documentação incompleta. Auxiliamos proprietários a regularizar a documentação de seus imóveis, seja pela via administrativa ou judicial.</p>
+                <p>A usucapião (extrajudicial ou judicial) é o principal instrumento para quem possui a posse do imóvel mas não tem o título de propriedade. Também atuamos em adjudicação compulsória e retificação de registro.</p>
+                <ul class="area-lista">
+                    <li>Usucapião judicial e extrajudicial</li>
+                    <li>Adjudicação compulsória</li>
+                    <li>Retificação de registro imobiliário</li>
+                    <li>Regularização de construções e loteamentos</li>
+                    <li>Assessoria junto ao Cartório de Registro de Imóveis</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="area-detalhe area-detalhe-invertida reveal">
+            <div class="area-detalhe-icone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="area-detalhe-texto">
+                <h2>Direito Condominial</h2>
+                <p>Condomínios residenciais e comerciais apresentam desafios jurídicos específicos. Assessoramos síndicos, administradoras e condôminos na interpretação e aplicação da Convenção de Condomínio, Regimento Interno e da Lei 4.591/64.</p>
+                <p>Atuamos na resolução de conflitos entre condôminos, na cobrança de cotas condominiais em atraso (ação de cobrança condominial) e na assessoria em assembleias e decisões administrativas.</p>
+                <ul class="area-lista">
+                    <li>Assessoria jurídica a síndicos e administradoras</li>
+                    <li>Cobrança de cotas condominiais</li>
+                    <li>Revisão de convenções e regimentos internos</li>
+                    <li>Resolução de conflitos entre condôminos</li>
+                    <li>Assessoria em assembleias gerais</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="area-detalhe reveal">
+            <div class="area-detalhe-icone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="area-detalhe-texto">
+                <h2>Inventário e Partilha de Imóveis</h2>
+                <p>A morte de um familiar gera não apenas dor, mas também obrigações jurídicas imediatas. O inventário é o procedimento legal para transferir o patrimônio imobiliário do falecido aos herdeiros. Atuamos nos processos de inventário judicial e extrajudicial (cartório), orientando as famílias de forma humanizada e eficiente.</p>
+                <ul class="area-lista">
+                    <li>Inventário judicial e extrajudicial</li>
+                    <li>Partilha de bens imóveis</li>
+                    <li>Meação em divórcio envolvendo imóveis</li>
+                    <li>Doação de imóveis com reserva de usufruto</li>
+                    <li>Planejamento sucessório preventivo</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="area-detalhe area-detalhe-invertida reveal">
+            <div class="area-detalhe-icone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="area-detalhe-texto">
+                <h2>Incorporações e Loteamentos</h2>
+                <p>Para incorporadoras, construtoras e loteadoras, oferecemos assessoria jurídica especializada em todas as fases do empreendimento: da aquisição do terreno ao registro da incorporação e comercialização das unidades. Garantimos conformidade legal e segurança para o empreendedor e para os adquirentes.</p>
+                <ul class="area-lista">
+                    <li>Registro de incorporação imobiliária</li>
+                    <li>Análise de terrenos para desenvolvimento</li>
+                    <li>Contratos com adquirentes de imóveis na planta</li>
+                    <li>Resolução de conflitos com compradores</li>
+                    <li>Assessoria em loteamentos urbanos e rurais</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final">
+    <div class="container">
+        <div class="cta-conteudo">
+            <span class="secao-tag">Precisando de ajuda?</span>
+            <h2>Seu Caso Merece Atenção Especializada</h2>
+            <p>Agende uma consulta e receba uma análise precisa e personalizada da sua situação.</p>
+            <div class="cta-botoes">
+                <a th:href="@{/contato}" class="btn btn-ouro">Agendar Consulta Gratuita</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>

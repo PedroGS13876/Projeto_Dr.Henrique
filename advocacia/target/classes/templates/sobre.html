@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head(${pageTitle}, ${pageDescription})}"></head>
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<!-- ============================================================
+     HERO interno da página Sobre
+     ============================================================ -->
+<section class="pagina-hero">
+    <div class="pagina-hero-overlay"></div>
+    <div class="container">
+        <div class="pagina-hero-conteudo">
+            <span class="secao-tag">Conheça o advogado</span>
+            <h1>Dr. Rafael Mendonça</h1>
+            <p>Advogado especialista em Direito Imobiliário com mais de 15 anos dedicados a proteger os interesses de seus clientes.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO: Perfil do advogado
+     ============================================================ -->
+<section class="sobre-perfil">
+    <div class="container">
+        <div class="sobre-grid">
+
+            <!-- Foto / Representação visual -->
+            <div class="sobre-foto-col reveal">
+                <div class="sobre-foto-frame">
+                    <div class="sobre-foto-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <!-- Substitua por: <img src="/static/images/foto-advogado.jpg" alt="Dr. Rafael Mendonça"> -->
+                    </div>
+                    <div class="sobre-foto-badge">
+                        <span th:text="${oabAdvogado}">OAB/SP 123.456</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Texto biográfico -->
+            <div class="sobre-texto-col reveal">
+                <span class="secao-tag">Trajetória Profissional</span>
+                <h2>Uma Carreira Construída<br>sobre Resultados</h2>
+
+                <p>O Dr. Rafael Mendonça é Bacharel em Direito pela Pontifícia Universidade Católica de São Paulo (PUC-SP) e possui especialização em Direito Imobiliário pelo Instituto Brasileiro de Direito Imobiliário (IBRADIM). Ao longo de sua carreira, aprofundou-se nas mais complexas questões do direito da propriedade, tornando-se uma referência reconhecida no mercado jurídico paulistano.</p>
+
+                <p>Sua atuação profissional é marcada pela combinação de rigor técnico e sensibilidade às necessidades reais de cada cliente. Compreendendo que a aquisição ou regularização de um imóvel representa, frequentemente, o patrimônio mais significativo de uma família ou empresa, o Dr. Rafael conduz cada caso com a seriedade e o comprometimento que a situação merece.</p>
+
+                <p>É membro ativo da Comissão de Direito Imobiliário da OAB/SP e colaborador frequente em seminários e publicações especializadas na área.</p>
+
+                <div class="sobre-formacao">
+                    <h3>Formação e Certificações</h3>
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Bacharel em Direito — PUC-SP
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Especialização em Direito Imobiliário — IBRADIM
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            MBA em Gestão de Negócios Imobiliários — FGV
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Membro da Comissão de Direito Imobiliário — OAB/SP
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO: Valores e missão
+     ============================================================ -->
+<section class="valores">
+    <div class="container">
+        <div class="secao-intro">
+            <span class="secao-tag">Princípios</span>
+            <h2 class="secao-titulo">Valores que Guiam<br>Nossa Advocacia</h2>
+        </div>
+        <div class="valores-grid">
+            <div class="valor-item reveal">
+                <div class="valor-num">01</div>
+                <h3>Ética Inabalável</h3>
+                <p>A conduta ética é a base de toda relação com clientes, parceiros e o próprio sistema de Justiça. Nunca prometemos resultados impossíveis.</p>
+            </div>
+            <div class="valor-item reveal">
+                <div class="valor-num">02</div>
+                <h3>Excelência Técnica</h3>
+                <p>O aperfeiçoamento constante é uma obrigação profissional. Mantemo-nos atualizados sobre toda a jurisprudência e legislação imobiliária.</p>
+            </div>
+            <div class="valor-item reveal">
+                <div class="valor-num">03</div>
+                <h3>Dedicação Total</h3>
+                <p>Cada caso recebe a mesma dedicação, independente de seu porte. O seu problema é tratado como se fosse nosso.</p>
+            </div>
+            <div class="valor-item reveal">
+                <div class="valor-num">04</div>
+                <h3>Comunicação Clara</h3>
+                <p>Traduzimos a linguagem jurídica para o cotidiano do cliente. Você entende cada etapa e toma decisões com plena consciência.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     CTA
+     ============================================================ -->
+<section class="cta-final">
+    <div class="container">
+        <div class="cta-conteudo">
+            <span class="secao-tag">Próximo passo</span>
+            <h2>Vamos Conversar Sobre Seu Caso?</h2>
+            <p>A primeira consulta é gratuita. Apresente sua situação e receba uma avaliação honesta e qualificada.</p>
+            <div class="cta-botoes">
+                <a th:href="@{/contato}" class="btn btn-ouro">Solicitar Consulta</a>
+                <a th:href="@{/areas-de-atuacao}" class="btn btn-contorno-claro">Ver Áreas de Atuação</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>

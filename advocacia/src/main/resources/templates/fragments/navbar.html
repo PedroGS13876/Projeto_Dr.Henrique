@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!--/* ============================================================
+   FRAGMENTO: navbar.html
+   Barra de navegação fixa, reutilizável em todas as páginas
+   ============================================================ */-->
+
+<nav th:fragment="navbar" class="navbar" id="navbar">
+    <div class="navbar-container">
+
+        <!-- Logo / Nome do escritório -->
+        <a th:href="@{/}" class="navbar-brand">
+            <span class="brand-titulo">Dr. Rafael Mendonça</span>
+            <span class="brand-subtitulo">Advocacia Imobiliária</span>
+        </a>
+
+        <!-- Botão hamburguer (mobile) -->
+        <button class="navbar-toggle" id="navbarToggle" aria-label="Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Links de navegação -->
+        <ul class="navbar-menu" id="navbarMenu">
+            <li>
+                <a th:href="@{/}"
+                   th:classappend="${paginaAtual == 'home'} ? 'ativo' : ''"
+                   class="nav-link">Início</a>
+            </li>
+            <li>
+                <a th:href="@{/sobre}"
+                   th:classappend="${paginaAtual == 'sobre'} ? 'ativo' : ''"
+                   class="nav-link">Sobre</a>
+            </li>
+            <li>
+                <a th:href="@{/areas-de-atuacao}"
+                   th:classappend="${paginaAtual == 'areas'} ? 'ativo' : ''"
+                   class="nav-link">Áreas de Atuação</a>
+            </li>
+            <li>
+                <a th:href="@{/contato}"
+                   th:classappend="${paginaAtual == 'contato'} ? 'ativo' : ''"
+                   class="nav-link nav-cta">Consulta Gratuita</a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head(${pageTitle}, ${pageDescription})}"></head>
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<!-- Hero da página -->
+<section class="pagina-hero">
+    <div class="pagina-hero-overlay"></div>
+    <div class="container">
+        <div class="pagina-hero-conteudo">
+            <span class="secao-tag">Fale conosco</span>
+            <h1>Entre em Contato</h1>
+            <p>Estamos prontos para ouvir você e oferecer a orientação jurídica que precisa.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO: Formulário + Informações de contato
+     ============================================================ -->
+<section class="contato-section">
+    <div class="container">
+        <div class="contato-grid">
+
+            <!-- ===========================
+                 Coluna: Informações
+                 =========================== -->
+            <div class="contato-info reveal">
+                <h2>Informações do Escritório</h2>
+                <p class="contato-intro">Atendemos presencialmente em nosso escritório ou por videochamada. Entre em contato pelo canal de sua preferência.</p>
+
+                <div class="info-item">
+                    <div class="info-icone">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div>
+                        <strong>Telefone</strong>
+                        <a th:href="'tel:' + ${telefone}" th:text="${telefone}">(11) 99999-9999</a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icone info-icone-verde">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    </div>
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <a th:href="'https://wa.me/' + ${whatsapp}" target="_blank">Enviar mensagem</a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icone">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div>
+                        <strong>E-mail</strong>
+                        <a th:href="'mailto:' + ${emailAdvogado}" th:text="${emailAdvogado}">contato@escritorio.com.br</a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icone">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div>
+                        <strong>Endereço</strong>
+                        <span th:text="${endereco}">Av. Paulista, 1000, São Paulo</span>
+                    </div>
+                </div>
+
+                <div class="horario-atendimento">
+                    <h3>Horário de Atendimento</h3>
+                    <table>
+                        <tr><td>Segunda a Sexta</td><td>09h às 18h</td></tr>
+                        <tr><td>Sábados</td><td>09h às 13h</td></tr>
+                        <tr><td>Domingos e Feriados</td><td>Fechado</td></tr>
+                    </table>
+                    <p class="horario-obs">* Atendimentos emergenciais mediante agendamento prévio</p>
+                </div>
+            </div>
+
+            <!-- ===========================
+                 Coluna: Formulário
+                 =========================== -->
+            <div class="contato-formulario-col reveal">
+                <div class="contato-form-card">
+                    <h2>Envie-nos uma Mensagem</h2>
+                    <p>Preencha o formulário e retornaremos em até <strong>24 horas úteis</strong>.</p>
+
+                    <!-- Mensagem de sucesso (flash attribute do Spring) -->
+                    <div th:if="${sucesso}" class="alerta alerta-sucesso">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span th:text="${sucesso}">Mensagem enviada!</span>
+                    </div>
+
+                    <!-- Mensagem de erro -->
+                    <div th:if="${erro}" class="alerta alerta-erro">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                        <span th:text="${erro}">Erro ao enviar.</span>
+                    </div>
+
+                    <!-- Formulário Thymeleaf ligado ao objeto ContatoMensagem -->
+                    <form th:action="@{/contato/enviar}"
+                          th:object="${contatoMensagem}"
+                          method="post"
+                          class="contato-form"
+                          id="contatoForm">
+
+                        <!-- Token CSRF gerado automaticamente pelo Spring Security (se habilitado) -->
+
+                        <div class="form-row">
+                            <div class="form-grupo" th:classappend="${#fields.hasErrors('nome')} ? 'form-grupo-erro'">
+                                <label for="nome">Nome completo *</label>
+                                <input type="text" id="nome" th:field="*{nome}"
+                                       placeholder="Seu nome completo"
+                                       autocomplete="name">
+                                <span class="form-erro" th:if="${#fields.hasErrors('nome')}"
+                                      th:errors="*{nome}">Nome inválido</span>
+                            </div>
+
+                            <div class="form-grupo" th:classappend="${#fields.hasErrors('email')} ? 'form-grupo-erro'">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" th:field="*{email}"
+                                       placeholder="seu@email.com"
+                                       autocomplete="email">
+                                <span class="form-erro" th:if="${#fields.hasErrors('email')}"
+                                      th:errors="*{email}">E-mail inválido</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-grupo">
+                                <label for="telefone">Telefone / WhatsApp</label>
+                                <input type="tel" id="telefone" th:field="*{telefone}"
+                                       placeholder="(11) 97295-1144"
+                                       autocomplete="tel">
+                            </div>
+
+                            <div class="form-grupo" th:classappend="${#fields.hasErrors('assunto')} ? 'form-grupo-erro'">
+                                <label for="assunto">Assunto *</label>
+                                <select id="assunto" th:field="*{assunto}">
+                                    <option value="">Selecione o assunto</option>
+                                    <option value="Compra e Venda de Imóveis">Compra e Venda de Imóveis</option>
+                                    <option value="Contratos de Locação">Contratos de Locação</option>
+                                    <option value="Regularização Fundiária / Usucapião">Regularização / Usucapião</option>
+                                    <option value="Direito Condominial">Direito Condominial</option>
+                                    <option value="Inventário e Partilha">Inventário e Partilha</option>
+                                    <option value="Incorporação e Loteamento">Incorporação e Loteamento</option>
+                                    <option value="Outro assunto">Outro assunto</option>
+                                </select>
+                                <span class="form-erro" th:if="${#fields.hasErrors('assunto')}"
+                                      th:errors="*{assunto}">Selecione um assunto</span>
+                            </div>
+                        </div>
+
+                        <div class="form-grupo" th:classappend="${#fields.hasErrors('mensagem')} ? 'form-grupo-erro'">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea id="mensagem" th:field="*{mensagem}"
+                                      rows="5"
+                                      placeholder="Descreva brevemente sua situação para que possamos orientá-lo melhor..."></textarea>
+                            <span class="form-erro" th:if="${#fields.hasErrors('mensagem')}"
+                                  th:errors="*{mensagem}">Mensagem inválida</span>
+                        </div>
+
+                        <p class="form-aviso">
+                            * As informações enviadas são confidenciais e protegidas pelo sigilo profissional.
+                        </p>
+
+                        <button type="submit" class="btn btn-ouro btn-bloco" id="btnEnviar">
+                            <span class="btn-texto">Enviar Mensagem</span>
+                            <span class="btn-loading" style="display:none">Enviando...</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>
