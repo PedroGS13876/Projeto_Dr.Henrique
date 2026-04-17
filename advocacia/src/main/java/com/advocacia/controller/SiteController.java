@@ -74,7 +74,7 @@ public class SiteController {
     public String home(Model model) {
         adicionarDadosGlobais(model);
         model.addAttribute("paginaAtual", "home");
-        model.addAttribute("pageTitle", "Dr. Rafael Mendonça | Advogado Imobiliário em São Paulo");
+        model.addAttribute("pageTitle", "Dr. Luiz Henrique | Advogado Imobiliário em São Paulo");
         model.addAttribute("pageDescription",
             "Advocacia especializada em Direito Imobiliário em São Paulo. " +
             "Compra e venda de imóveis, contratos, regularização fundiária e muito mais.");
@@ -89,9 +89,9 @@ public class SiteController {
     public String sobre(Model model) {
         adicionarDadosGlobais(model);
         model.addAttribute("paginaAtual", "sobre");
-        model.addAttribute("pageTitle", "Sobre | Dr. Rafael Mendonça - Advogado Imobiliário");
+        model.addAttribute("pageTitle", "Sobre | Dr. Luiz Henrique - Advogado Imobiliário");
         model.addAttribute("pageDescription",
-            "Conheça o Dr. Rafael Mendonça, advogado especialista em Direito Imobiliário " +
+            "Conheça o Dr. Luiz Henrique, advogado especialista em Direito Imobiliário " +
             "com mais de 15 anos de experiência em São Paulo.");
         return "sobre";
     }
@@ -103,7 +103,7 @@ public class SiteController {
     public String areasAtuacao(Model model) {
         adicionarDadosGlobais(model);
         model.addAttribute("paginaAtual", "areas");
-        model.addAttribute("pageTitle", "Áreas de Atuação | Direito Imobiliário - Dr. Rafael Mendonça");
+        model.addAttribute("pageTitle", "Áreas de Atuação | Direito Imobiliário - Dr. Luiz Henrique");
         model.addAttribute("pageDescription",
             "Atuação em todas as frentes do Direito Imobiliário: compra e venda, " +
             "locação, regularização, usucapião, inventário e muito mais.");
@@ -117,9 +117,9 @@ public class SiteController {
     public String contato(Model model) {
         adicionarDadosGlobais(model);
         model.addAttribute("paginaAtual", "contato");
-        model.addAttribute("pageTitle", "Contato | Dr. Rafael Mendonça - Advocacia Imobiliária");
+        model.addAttribute("pageTitle", "Contato | Dr. Luiz Henrique - Advocacia Imobiliária");
         model.addAttribute("pageDescription",
-            "Entre em contato com o escritório Dr. Rafael Mendonça Advocacia. " +
+            "Entre em contato com o escritório Dr. Luiz Henrique Advocacia. " +
             "Atendimento em São Paulo e região.");
 
         // Adiciona objeto vazio para o formulário Thymeleaf
@@ -143,7 +143,7 @@ public class SiteController {
         if (bindingResult.hasErrors()) {
             adicionarDadosGlobais(model);
             model.addAttribute("paginaAtual", "contato");
-            model.addAttribute("pageTitle", "Contato | Dr. Rafael Mendonça");
+            model.addAttribute("pageTitle", "Contato | Dr. Luiz Henrique");
             model.addAttribute("pageDescription", "Entre em contato com nosso escritório.");
             model.addAttribute("erroValidacao", true);
             log.warn("Formulário de contato enviado com erros de validação");

@@ -1,5 +1,7 @@
 /**
- * main.js — Advocacia Dr. Rafael Mendonça
+ * main.js — Advocacia Dr. Luiz Henrique
+ * Desenvolvido por Pedro Garcia
+ * Última atualização: 2026-04-17
  * Scripts de comportamento: navbar, scroll reveal, formulário, etc.
  */
 
@@ -154,5 +156,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 6000);
     });
 
-    console.log('✅ Advocacia Mendonça — scripts carregados');
+    console.log('✅ Advocacia Luiz Henrique — scripts carregados');
 });
