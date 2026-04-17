@@ -1,4 +1,4 @@
-# ⚖️ Advocacia Imobiliária — Dr. Rafael Mendonça
+# ⚖️ Advocacia Imobiliária — Dr. Luiz Henrique
 ### Site profissional em Spring Boot + Thymeleaf
 
 ---
@@ -129,7 +129,7 @@ java -jar target/advocacia-imobiliaria-1.0.0.jar
 Edite `src/main/resources/application.properties`:
 
 ```properties
-advocacia.nome=Dr. Rafael Mendonça
+advocacia.nome=Dr. Luiz Henrique
 advocacia.oab=OAB/SP 123.456
 advocacia.telefone=(11) 99999-9999
 advocacia.whatsapp=5511999999999     ← Formato: 55 + DDD + número (sem espaços)
@@ -143,7 +143,7 @@ Substitua o placeholder visual na página `sobre.html`:
 
 ```html
 <!-- Remova o div placeholder e adicione: -->
-<img src="/static/images/foto-advogado.jpg" alt="Dr. Rafael Mendonça">
+<img src="/static/images/foto-advogado.jpg" alt="Dr. Luiz Henrique">
 ```
 
 Coloque a foto em: `src/main/resources/static/images/foto-advogado.jpg`
