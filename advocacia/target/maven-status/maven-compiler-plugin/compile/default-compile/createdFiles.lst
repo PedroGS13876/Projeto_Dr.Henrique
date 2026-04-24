@@ -1,0 +1,6 @@
+com\advocacia\service\ContatoService.class
+com\advocacia\controller\SiteController.class
+com\advocacia\model\ContatoMensagem.class
+com\advocacia\AdvocaciaApplication.class
+com\advocacia\config\WebConfig.class
+com\advocacia\repository\ContatoRepository.class
