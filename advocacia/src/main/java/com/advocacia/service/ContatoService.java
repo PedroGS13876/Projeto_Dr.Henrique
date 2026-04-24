@@ -1,14 +1,18 @@
 package com.advocacia.service;
 
-import com.advocacia.model.ContatoMensagem;
-import com.advocacia.repository.ContatoRepository;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 
-import java.util.List;
+import com.advocacia.model.ContatoMensagem;
+import com.advocacia.repository.ContatoRepository;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Serviço responsável pela lógica de negócio do formulário de contato.
@@ -20,6 +24,7 @@ import java.util.List;
 public class ContatoService {
 
     private final ContatoRepository contatoRepository;
+    private final JavaMailSender mailSender;
 
     // Injetado do application.properties
     @Value("${advocacia.email}")
@@ -34,7 +39,7 @@ public class ContatoService {
      *
      * @param mensagem objeto com os dados do formulário (já validado pelo controller)
      * @return mensagem salva com ID gerado
-     */
+        */
     @Transactional
     public ContatoMensagem salvarMensagem(ContatoMensagem mensagem) {
         log.info("Nova mensagem de contato recebida de: {} <{}>", mensagem.getNome(), mensagem.getEmail());
@@ -44,7 +49,17 @@ public class ContatoService {
 
         // Simula envio de e-mail (log apenas)
         // Para ativar envio real: injete JavaMailSender e configure o SMTP no application.properties
-        log.info("📧 [SIMULADO] E-mail de notificação enviado para: {}", emailAdvogado);
+        SimpleMailMessage email = new SimpleMailMessage();
+        email.setTo(emailAdvogado);
+        email.setFrom(emailAdvogado);
+        email.setSubject("Novo contato: " + mensagem.getAssunto());
+        email.setText(
+            "Nome: " + mensagem.getNome() + "\n" +
+            "E-mail: " + mensagem.getEmail() + "\n" +
+            "Telefone: " + mensagem.getTelefone() + "\n\n" +
+            "Mensagem:\n" + mensagem.getMensagem()
+        );
+        mailSender.send(email);
         log.info("   Assunto: Nova mensagem de contato - {}", mensagem.getAssunto());
         log.info("   Remetente: {} <{}>", mensagem.getNome(), mensagem.getEmail());
 
